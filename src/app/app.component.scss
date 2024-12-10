@@ -1,0 +1,42 @@
+@import "varaibles";
+@import "mixins";
+
+
+
+.parent{
+    width: 100vw;
+    height: 100vh;
+    background-color:$thirdColor;
+    display: flex;
+    .left{
+        width: 20%;
+        height: 100%;
+        background-color: orange;
+        h1{
+            color: green;
+        }
+    }
+    .right{
+        width: 80%;
+        height: 100%;
+        background-color:$thirdColor;
+        .one{
+          @include button-structure();
+            background-color:blue ;
+        }
+        .two{
+           @include button-structure();
+            background-color:red ;
+
+        }
+        .three{
+            @include button-structure();
+           
+            background-color:green ;
+        }
+        .one-round{
+            @extend.one;
+            border-radius: 50%;
+        }
+    }
+}
